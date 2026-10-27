@@ -115,6 +115,19 @@ details ul { list-style:none; padding:0 0 22px 150px; font-size:17px; } details 
 .cifra { display:flex; justify-content:center; align-items:flex-start; gap:.04em; font-stretch:75%; font-weight:900; font-size:clamp(120px, 20vw, 170px); line-height:.9; letter-spacing:-.05em; color:var(--crema); text-align:center; } .cifra sup { font-size:.32em; line-height:1; margin-top:.22em; color:var(--verde); letter-spacing:0; } .cifra::after { content:""; width:.2em; }
 .una { text-align:center; font-size:15px; margin:8px 0 28px; } .dentro { list-style:none; display:grid; gap:0; margin-bottom:32px; } .dentro li { padding:14px 0 14px 32px; position:relative; border-top:1px solid rgba(255,255,255,.08); color:#E4E9E4; font-size:18px; } .dentro li::before { content:"✓"; position:absolute; left:0; top:16px; width:20px; height:20px; border-radius:50%; background:rgba(62,224,127,.16); color:var(--verde); font-size:12px; font-weight:800; display:grid; place-items:center; } .dentro em { font-style:italic; color:var(--chiaro); }
 .prezzo .cta { width:100%; }
+.prezzo .prima { display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline; gap:4px 14px; margin-bottom:4px; } .prezzo .prima s { white-space:nowrap; font-stretch:84%; font-weight:800; font-size:38px; letter-spacing:-.02em; color:var(--tenue); text-decoration-color:var(--rosso); text-decoration-thickness:4px; } .prezzo .prima span { font-size:12.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--chiaro); }
+.timer { display:flex; flex-direction:column; align-items:center; gap:12px; margin:0 auto 30px; } .timer .tit { font-size:12.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--rosso); text-align:center; } .timer .cifre { display:flex; gap:10px; } .timer .cifre div { min-width:80px; padding:12px 8px 9px; border-radius:14px; background:rgba(255,107,94,.08); border:1px solid rgba(255,107,94,.4); text-align:center; } .timer b { display:block; font-family:'Sora',sans-serif; font-weight:700; font-size:34px; line-height:1; color:var(--crema); font-variant-numeric:tabular-nums; } .timer small { display:block; margin-top:6px; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft); }
+#prezzo { scroll-margin-top:72px; }
+.offerta { display:inline-flex; align-items:center; gap:10px; padding:6px 6px 6px 14px; border-radius:999px; background:linear-gradient(180deg,#FF8577,#F0503F); border:2px solid #FFC2BA; color:#2A0703; text-decoration:none; white-space:nowrap; font-stretch:80%; font-weight:900; font-size:15px; letter-spacing:.08em; text-transform:uppercase; box-shadow:0 0 0 0 rgba(255,107,94,.55); animation:richiamo 2.2s ease-out infinite; transition:transform .15s; }
+.offerta:hover { transform:translateY(-1px) scale(1.03); } .offerta:focus-visible { outline:3px solid var(--crema); outline-offset:3px; }
+.offerta .punto { width:8px; height:8px; border-radius:50%; background:#2A0703; animation:lampeggia 1s steps(2,start) infinite; }
+.offerta .sconto { background:#2A0703; color:#FFD9D4; border-radius:6px; padding:2px 7px; letter-spacing:.02em; }
+.offerta b { font-family:'Sora',sans-serif; font-weight:700; font-size:15px; letter-spacing:.03em; font-variant-numeric:tabular-nums; color:var(--crema); background:#2A0703; border-radius:999px; padding:5px 11px; }
+@keyframes richiamo { 0% { box-shadow:0 0 0 0 rgba(255,107,94,.55); } 70%,100% { box-shadow:0 0 0 12px rgba(255,107,94,0); } }
+@keyframes lampeggia { to { visibility:hidden; } }
+@media (prefers-reduced-motion:reduce) { .offerta, .offerta .punto { animation:none; } }
+@media (max-width:480px) { .barra .marchio .nome { display:none; } .barra .w { gap:10px; } .barra .mini { padding:8px 12px; font-size:15px; } }
+@media (max-width:640px) { .timer .cifre { gap:8px; } .timer .cifre div { min-width:66px; } .timer b { font-size:28px; } .offerta { gap:7px; padding:4px 4px 4px 10px; font-size:13px; } .offerta .sconto { display:none; } .offerta b { font-size:13.5px; padding:4px 8px; }.prezzo .prima s { font-size:32px; } }
 .garanzia { max-width:760px; margin-inline:auto; text-align:center; padding:44px 36px; } .garanzia h2 { font-size:clamp(28px,3.6vw,40px); }
 
 .testa { max-width:820px; } .due-col { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:start; } .due-col .grande + .grande { margin-top:18px; }
@@ -172,7 +185,7 @@ footer { border-top:1px solid rgba(255,255,255,.08); font-size:14px; color:var(-
 </head>
 <body>
 
-<div class="barra"><div class="w"><a class="marchio" href="#"><img src="img/simbolo-ailab.png" alt=""><span class="nome"><b>AI</b>Lab</span></a><small>Percorso con affiancamento · posti limitati</small><a class="mini" href="#" data-wa>Prenota</a></div></div>
+<div class="barra"><div class="w"><a class="marchio" href="#"><img src="img/simbolo-ailab.png" alt=""><span class="nome"><b>AI</b>Lab</span></a><a class="offerta" href="#prezzo" aria-label="Vai al prezzo dell'offerta"><span class="punto" aria-hidden="true"></span><span class="lab">Offerta</span><span class="sconto">−74%</span><b data-conto>23:59:59</b></a><a class="mini" href="#" data-wa>Prenota</a></div></div>
 
 <!-- apertura -->
 <section class="hero">
@@ -345,8 +358,10 @@ footer { border-top:1px solid rgba(255,255,255,.08); font-size:14px; color:var(-
   <h2>Quanto costa <em>il percorso</em></h2>
   <div class="pan prezzo">
     <span class="eti">PERCORSO + 2 CHIAMATE PRIVATE</span>
+    <p class="prima"><s>750 €</s><span>Prezzo di lancio</span></p>
     <div class="cifra"><sup>€</sup><span>197</span></div>
     <p class="una">una volta sola · accesso per sempre</p>
+    <div class="timer"><span class="tit">L'offerta finisce tra</span><div class="cifre"><div><b data-h>23</b><small>ore</small></div><div><b data-m>59</b><small>minuti</small></div><div><b data-s>59</b><small>secondi</small></div></div></div>
     <ul class="dentro">
       <li>Le <em>21 lezioni</em>, con i passaggi a schermo</li>
       <li>Sotto ogni lezione, il testo con le richieste e i messaggi da copiare</li>
@@ -400,6 +415,19 @@ const WA = N + encodeURIComponent("Ciao Matteo, ho visto la pagina di AI Lab e v
 const AIUTO = N + encodeURIComponent("Ciao Matteo, ho una domanda su AI Lab.");
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = WA; a.target = "_blank"; a.rel = "noopener"; });
 document.querySelectorAll("[data-wa-aiuto]").forEach(a => { a.href = AIUTO; a.target = "_blank"; a.rel = "noopener"; });
+// conto alla rovescia: finisce a mezzanotte e ricomincia da 24 ore, senza salvare niente nel browser
+(function () {
+  const due = n => String(n).padStart(2, "0");
+  const conto = document.querySelectorAll("[data-conto]"), H = document.querySelector("[data-h]"), M = document.querySelector("[data-m]"), S = document.querySelector("[data-s]");
+  function tick() {
+    const ora = new Date(), fine = new Date(ora);
+    fine.setHours(24, 0, 0, 0);
+    const t = Math.max(0, Math.floor((fine - ora) / 1000)), h = Math.floor(t / 3600), m = Math.floor(t % 3600 / 60), s = t % 60;
+    conto.forEach(e => e.textContent = due(h) + ":" + due(m) + ":" + due(s));
+    if (H) H.textContent = due(h); if (M) M.textContent = due(m); if (S) S.textContent = due(s);
+  }
+  tick(); setInterval(tick, 1000);
+})();
 </script>
 </body>
 </html>
