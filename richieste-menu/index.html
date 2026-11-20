@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le richieste esatte del menù · @matti_ia_</title>
+<meta name="description" content="Le richieste che ho scritto a ChatGPT per rifare il menù da stampare, parola per parola, con i tempi di ogni giro.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Le richieste esatte del menù">
+<meta property="og:description" content="Parola per parola, con i tempi di ogni giro. Dal video di @matti_ia_.">
+<meta property="og:image" content="https://matteospico-ai.github.io/ai-lab/img/og-anteprima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#090C0A">
+<link rel="icon" href="../img/simbolo-ailab.png">
+<style>
+@font-face { font-family:'Archivo'; src:url(../fonts/archivo-wdth.woff2) format('woff2'); font-weight:400 900; font-stretch:75% 100%; font-style:normal; font-display:swap; }
+@font-face { font-family:'Sora'; src:url(../fonts/sora-var.woff2) format('woff2'); font-weight:100 800; font-style:normal; font-display:swap; }
+@font-face { font-family:'Instrument Serif'; src:url(../fonts/instrumentserif-italic.woff2) format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'JetBrains Mono'; src:url(../fonts/jetbrainsmono-400.woff2) format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+
+:root { --bg:#090C0A; --crema:#F4F0E6; --soft:#A7B2AA; --tenue:#6F7B73; --verde:#3EE07F; --chiaro:#9DF5BC; --oro:#E8C872; --bordo:rgba(62,224,127,.2); }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Archivo',system-ui,sans-serif; font-size:18px; line-height:1.6; color:var(--soft); background:var(--bg); -webkit-font-smoothing:antialiased; overflow-x:clip;
+  background-image:radial-gradient(90% 40% at 50% 0%, rgba(62,224,127,.12), transparent 70%); background-repeat:no-repeat; }
+img { max-width:100%; display:block; }
+.w { width:min(760px, 100% - 32px); margin-inline:auto; }
+
+.barra { border-bottom:1px solid var(--bordo); }
+.barra .w { display:flex; align-items:center; justify-content:space-between; height:64px; }
+.marchio { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.marchio img { width:34px; height:34px; }
+.marchio .nome { font-family:'Sora',sans-serif; font-weight:300; font-size:21px; letter-spacing:-.02em; color:var(--crema); display:flex; gap:5px; }
+.marchio .nome b { font-weight:700; }
+.barra small { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); }
+
+h1, h2 { text-wrap:balance; color:var(--crema); font-stretch:84%; font-weight:800; letter-spacing:-.025em; line-height:1.05; }
+h1 { font-size:clamp(38px, 7vw, 60px); }
+h2 { font-size:clamp(28px, 5vw, 38px); margin-bottom:14px; }
+h1 em, h2 em { font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-stretch:100%; letter-spacing:-.005em; color:var(--verde); }
+p { text-wrap:pretty; } p + p { margin-top:12px; }
+p em { font-style:italic; color:var(--crema); }
+
+.apertura { padding:56px 0 8px; }
+.apertura .sopra { font-size:12.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--chiaro); margin-bottom:16px; }
+.apertura .sub { font-size:20px; line-height:1.5; color:#D5DCD6; margin-top:18px; }
+
+.serve { margin-top:34px; border-top:1px solid var(--bordo); border-bottom:1px solid var(--bordo); padding:22px 0; }
+.serve h3 { font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--chiaro); margin-bottom:10px; }
+.serve ul { list-style:none; display:grid; gap:10px; }
+.serve li { padding-left:22px; position:relative; }
+.serve li::before { content:""; position:absolute; left:2px; top:.62em; width:8px; height:8px; border-radius:50%; background:var(--verde); }
+
+section { padding:52px 0 8px; }
+.fase { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--chiaro); letter-spacing:.04em; margin-bottom:10px; }
+
+.passo { margin-top:30px; }
+.passo .testa { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; }
+.passo .titolo { color:var(--crema); font-weight:800; font-stretch:86%; font-size:21px; letter-spacing:-.01em; }
+.passo .tempo { font-family:'JetBrains Mono',monospace; font-size:13.5px; color:var(--oro); white-space:nowrap; }
+.passo .prima { font-size:16px; margin-bottom:10px; }
+
+.richiesta { position:relative; border-radius:18px; border:1px solid var(--bordo); padding:20px 20px 64px;
+  background:radial-gradient(120% 90% at 0% 0%, rgba(62,224,127,.13), transparent 55%), linear-gradient(160deg, #14201A 0%, #0D1310 60%, #0A0E0C 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 24px 50px -30px rgba(0,0,0,.8); }
+.richiesta p { color:var(--crema); font-size:17px; line-height:1.62; white-space:pre-line; }
+.richiesta mark { background:rgba(232,200,114,.16); color:var(--oro); border-radius:5px; padding:0 4px; }
+.copia { position:absolute; right:14px; bottom:14px; font:inherit; font-stretch:82%; font-weight:900; font-size:15px; letter-spacing:.02em; text-transform:uppercase; cursor:pointer;
+  color:#04160B; background:linear-gradient(180deg,#6BF29E,#1FC25F); border:2px solid #C9FBDB; border-radius:10px; padding:8px 16px; }
+.copia.fatto { background:var(--crema); border-color:var(--crema); }
+.passo .dopo { font-size:16px; margin-top:12px; color:var(--soft); }
+
+.controllo { margin-top:16px; border-left:3px solid var(--oro); padding:4px 0 4px 18px; }
+
+.chiusura { padding:64px 0 40px; text-align:center; }
+.chiusura p { max-width:560px; margin-inline:auto; font-size:20px; line-height:1.5; color:#D5DCD6; }
+.cta { display:inline-flex; align-items:center; justify-content:center; margin-top:28px; font-stretch:80%; font-weight:900; font-size:22px; text-transform:uppercase; line-height:1.1; text-decoration:none;
+  color:#04160B; background:linear-gradient(180deg, #6BF29E 0%, #25D366 55%, #17B455 100%); border:3px solid #C9FBDB; border-radius:16px; padding:19px 32px;
+  box-shadow:0 0 0 6px rgba(62,224,127,.14), 0 18px 50px -8px rgba(37,211,102,.55), inset 0 2px 0 rgba(255,255,255,.55); }
+
+footer { border-top:1px solid var(--bordo); padding:22px 0 36px; font-size:14px; color:var(--tenue); text-align:center; }
+footer a { color:var(--soft); }
+
+@media (max-width:520px) {
+  body { font-size:17px; }
+  .apertura { padding-top:40px; }
+  .apertura .sub, .chiusura p { font-size:18px; }
+  .richiesta { padding:18px 16px 62px; }
+  .richiesta p { font-size:16px; }
+  .passo .testa { flex-direction:column; gap:2px; }
+}
+</style>
+</head>
+<body>
+
+<header class="barra"><div class="w">
+  <a class="marchio" href="../"><img src="../img/simbolo-ailab.png" alt=""><span class="nome"><b>AI</b>Lab</span></a>
+  <small>@matti_ia_</small>
+</div></header>
+
+<main class="w">
+
+<div class="apertura">
+  <p class="sopra">Dal video del menù da stampare</p>
+  <h1>Le richieste esatte del <em>menù</em></h1>
+  <p class="sub">Sono quelle che ho scritto a ChatGPT il 13 ottobre, tutte nella stessa chat, parola per parola. Dove trovi le parentesi quadre metti i dati del locale che hai scelto.</p>
+
+  <div class="serve">
+    <h3>Cosa ti serve</h3>
+    <ul>
+      <li>ChatGPT in modalità Work: è quella che apre il browser e guarda il profilo Instagram da sola.</li>
+      <li>Il link del profilo Instagram del locale.</li>
+      <li>Il file del menù che il locale ha già. Il mio era un PDF di dieci pagine fatto per il telefono.</li>
+    </ul>
+  </div>
+</div>
+
+<section>
+  <p class="fase">Prima · il carosello</p>
+  <h2>Si parte dal loro <em>Instagram</em></h2>
+  <p>Il menù l'ho chiesto nella chat dove ChatGPT aveva già fatto un carosello guardando il loro profilo. Per questo le richieste del menù dicono «nello stesso stile del carosello». Se parti da zero, comincia da queste due.</p>
+
+  <div class="passo">
+    <div class="testa"><span class="titolo">A · La copertina</span><span class="tempo">2 min 1 s</span></div>
+    <div class="richiesta">
+      <p data-testo>Questa è la pagina Instagram di <mark>[che locale è, per esempio un'hamburgeria]</mark> di <mark>[città]</mark>: <mark>[link del profilo]</mark> Apri il profilo con il tuo browser e guardalo: foto, colori e scritte. Poi prendi le loro vibe, il loro mood e la loro palette di colori e genera la copertina di un carosello Instagram in formato 4:5 che presenta il locale: una grafica a tutta pagina, con il panino grande in primo piano e il titolo dentro l'immagine. È un lavoro nuovo: non toccare i siti che ho già.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Il panino c'è perché era un'hamburgeria: tu metti il loro piatto o il loro prodotto. L'ultima frase serviva a me, che in ChatGPT avevo già dei siti: se non ne hai, puoi toglierla. Quando ChatGPT chiede di entrare su Instagram, premi «Consenti per questa chat».</p>
+  </div>
+
+  <div class="passo">
+    <div class="testa"><span class="titolo">B · Le altre quattro slide</span><span class="tempo">4 min 26 s</span></div>
+    <div class="richiesta">
+      <p data-testo>Mi piace. Adesso fai le altre quattro slide del carosello nello stesso stile della copertina: sempre a tutta pagina, ognuna con un'impaginazione diversa. Raccontano il locale con quello che trovi sul loro profilo: non inventare offerte né prezzi.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="fase">Poi · il menù, in tre giri</p>
+  <h2>Stessa chat, si allega il <em>menù</em></h2>
+  <p>Ogni giro parte dal risultato di quello prima. Le voci e i prezzi non cambiano mai: cambia solo la grafica.</p>
+
+  <div class="passo">
+    <div class="testa"><span class="titolo">1 · Primo giro</span><span class="tempo">5 min 1 s</span></div>
+    <p class="prima">Allega il file del menù, poi scrivi:</p>
+    <div class="richiesta">
+      <p data-testo>In allegato c'è il menù che hanno già. Rifallo come menù da stampare, un foglio A4 verticale, nello stesso stile del carosello. Usa solo le voci e i prezzi che trovi nel file, non aggiungere niente.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">È uscito giusto, ma piatto: fondo rosso, tre colonne, testo semplice.</p>
+  </div>
+
+  <div class="passo">
+    <div class="testa"><span class="titolo">2 · Secondo giro</span><span class="tempo">3 min 22 s</span></div>
+    <div class="richiesta">
+      <p data-testo>Adesso il menù: i dati vanno bene ma è piatto. Rifallo con cura: in alto una testata nello stile del carosello, con il nome e la foto di un panino; i titoli delle sezioni grandi, con lo stesso carattere del titolo del carosello; più aria fra le sezioni e margini larghi. Voci e prezzi lasciali identici.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Meglio, ma la foto del panino aveva un riquadro attorno.</p>
+  </div>
+
+  <div class="passo">
+    <div class="testa"><span class="titolo">3 · Terzo giro</span><span class="tempo">5 min 5 s</span></div>
+    <div class="richiesta">
+      <p data-testo>Meglio, ma non basta. La testata rifalla come un'immagine unica a tutta larghezza, nello stile della copertina del carosello: titolo e panino insieme, senza riquadri attorno alla foto. Sotto, fondo chiaro color panna: titoli delle sezioni rossi con lo stesso carattere del titolo, voci in nero, e una fila di puntini da ogni voce al suo prezzo. Voci e prezzi lasciali identici.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Questo è quello del video. In tutto, tredici minuti e mezzo di lavoro suo.</p>
+  </div>
+</section>
+
+<section>
+  <p class="fase">Prima di consegnarlo</p>
+  <h2>I prezzi li rileggi <em>tu</em></h2>
+  <div class="controllo">
+    <p>Uno per uno, contro il menù vecchio, compresi gli extra. Io li ho controllati tutti: coincidevano. Ma il menù va in mano ai clienti del locale, e un prezzo sbagliato lo paga il titolare.</p>
+    <p>Le foto dei panini le genera l'IA: al titolare lo dici. Poi gli mandi il file, e a stamparlo ci pensa il locale.</p>
+  </div>
+</section>
+
+<div class="chiusura">
+  <p>Il menù è la parte facile. Quella che paga è trovare chi lo compra e farsi dire sì: in AI Lab ti faccio vedere come, passo passo.</p>
+  <a class="cta" href="../">Scopri AI Lab</a>
+</div>
+
+</main>
+
+<footer><div class="w">Matteo Esposito · <a href="https://www.instagram.com/matti_ia_/">@matti_ia_</a></div></footer>
+
+<script>
+document.querySelectorAll('.copia').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.parentNode.querySelector('[data-testo]').textContent.replace(/\s+/g, ' ').trim();
+    var fatto = function () { b.textContent = 'Copiata'; b.classList.add('fatto'); setTimeout(function () { b.textContent = 'Copia'; b.classList.remove('fatto'); }, 2200); };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(t).then(fatto, function () { vecchio(t); fatto(); }); }
+    else { vecchio(t); fatto(); }
+  });
+});
+function vecchio(t) {
+  var a = document.createElement('textarea'); a.value = t; a.setAttribute('readonly', ''); a.style.position = 'fixed'; a.style.opacity = '0';
+  document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a);
+}
+</script>
+</body>
+</html>
