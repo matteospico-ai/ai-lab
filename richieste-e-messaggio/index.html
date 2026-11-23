@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le richieste esatte e il messaggio · @matti_ia_</title>
+<meta name="description" content="Le richieste che ho scritto a ChatGPT per rifare il menù del kebab e il cartello del garage, parola per parola, e il messaggio che mando alle attività.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Le richieste esatte e il messaggio">
+<meta property="og:description" content="Parola per parola, con i tempi di ogni giro. Dai video di @matti_ia_.">
+<meta property="og:image" content="https://matteospico-ai.github.io/ai-lab/img/og-anteprima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#090C0A">
+<link rel="icon" href="../img/simbolo-ailab.png">
+<style>
+@font-face { font-family:'Archivo'; src:url(../fonts/archivo-wdth.woff2) format('woff2'); font-weight:400 900; font-stretch:75% 100%; font-style:normal; font-display:swap; }
+@font-face { font-family:'Sora'; src:url(../fonts/sora-var.woff2) format('woff2'); font-weight:100 800; font-style:normal; font-display:swap; }
+@font-face { font-family:'Instrument Serif'; src:url(../fonts/instrumentserif-italic.woff2) format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'JetBrains Mono'; src:url(../fonts/jetbrainsmono-400.woff2) format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+
+:root { --bg:#090C0A; --crema:#F4F0E6; --soft:#A7B2AA; --tenue:#6F7B73; --verde:#3EE07F; --chiaro:#9DF5BC; --oro:#E8C872; --bordo:rgba(62,224,127,.2); }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Archivo',system-ui,sans-serif; font-size:18px; line-height:1.6; color:var(--soft); background:var(--bg); -webkit-font-smoothing:antialiased; overflow-x:clip;
+  background-image:radial-gradient(90% 40% at 50% 0%, rgba(62,224,127,.12), transparent 70%); background-repeat:no-repeat; }
+img { max-width:100%; display:block; }
+.w { width:min(760px, 100% - 32px); margin-inline:auto; }
+
+.barra { border-bottom:1px solid var(--bordo); }
+.barra .w { display:flex; align-items:center; justify-content:space-between; height:64px; }
+.marchio { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.marchio img { width:34px; height:34px; }
+.marchio .nome { font-family:'Sora',sans-serif; font-weight:300; font-size:21px; letter-spacing:-.02em; color:var(--crema); display:flex; gap:5px; }
+.marchio .nome b { font-weight:700; }
+.barra small { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); }
+
+h1, h2 { text-wrap:balance; color:var(--crema); font-stretch:84%; font-weight:800; letter-spacing:-.025em; line-height:1.05; }
+h1 { font-size:clamp(38px, 7vw, 60px); }
+h2 { font-size:clamp(28px, 5vw, 38px); margin-bottom:14px; }
+h1 em, h2 em { font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-stretch:100%; letter-spacing:-.005em; color:var(--verde); }
+p { text-wrap:pretty; } p + p { margin-top:12px; }
+p em { font-style:italic; color:var(--crema); }
+
+.apertura { padding:56px 0 8px; }
+.apertura .sopra { font-size:12.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--chiaro); margin-bottom:16px; }
+.apertura .sub { font-size:20px; line-height:1.5; color:#D5DCD6; margin-top:18px; }
+
+.serve { margin-top:34px; border-top:1px solid var(--bordo); border-bottom:1px solid var(--bordo); padding:22px 0; }
+.serve h3 { font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--chiaro); margin-bottom:10px; }
+.serve ul { list-style:none; display:grid; gap:10px; }
+.serve li { padding-left:22px; position:relative; }
+.serve li::before { content:""; position:absolute; left:2px; top:.62em; width:8px; height:8px; border-radius:50%; background:var(--verde); }
+
+section { padding:52px 0 8px; }
+.fase { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--chiaro); letter-spacing:.04em; margin-bottom:10px; }
+
+.passo { margin-top:30px; }
+.passo .testa { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; }
+.passo .titolo { color:var(--crema); font-weight:800; font-stretch:86%; font-size:21px; letter-spacing:-.01em; }
+.passo .tempo { font-family:'JetBrains Mono',monospace; font-size:13.5px; color:var(--oro); white-space:nowrap; }
+.passo .prima { font-size:16px; margin-bottom:10px; }
+
+.richiesta { position:relative; border-radius:18px; border:1px solid var(--bordo); padding:20px 20px 64px;
+  background:radial-gradient(120% 90% at 0% 0%, rgba(62,224,127,.13), transparent 55%), linear-gradient(160deg, #14201A 0%, #0D1310 60%, #0A0E0C 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 24px 50px -30px rgba(0,0,0,.8); }
+.richiesta p { color:var(--crema); font-size:17px; line-height:1.62; white-space:pre-line; }
+.richiesta mark { background:rgba(232,200,114,.16); color:var(--oro); border-radius:5px; padding:0 4px; }
+.copia { position:absolute; right:14px; bottom:14px; font:inherit; font-stretch:82%; font-weight:900; font-size:15px; letter-spacing:.02em; text-transform:uppercase; cursor:pointer;
+  color:#04160B; background:linear-gradient(180deg,#6BF29E,#1FC25F); border:2px solid #C9FBDB; border-radius:10px; padding:8px 16px; }
+.copia.fatto { background:var(--crema); border-color:var(--crema); }
+.passo .dopo { font-size:16px; margin-top:12px; color:var(--soft); }
+
+.controllo { margin-top:16px; border-left:3px solid var(--oro); padding:4px 0 4px 18px; }
+
+.chiusura { padding:64px 0 40px; text-align:center; }
+.chiusura p { max-width:560px; margin-inline:auto; font-size:20px; line-height:1.5; color:#D5DCD6; }
+.cta { display:inline-flex; align-items:center; justify-content:center; margin-top:28px; font-stretch:80%; font-weight:900; font-size:22px; text-transform:uppercase; line-height:1.1; text-decoration:none;
+  color:#04160B; background:linear-gradient(180deg, #6BF29E 0%, #25D366 55%, #17B455 100%); border:3px solid #C9FBDB; border-radius:16px; padding:19px 32px;
+  box-shadow:0 0 0 6px rgba(62,224,127,.14), 0 18px 50px -8px rgba(37,211,102,.55), inset 0 2px 0 rgba(255,255,255,.55); }
+
+footer { border-top:1px solid var(--bordo); padding:22px 0 36px; font-size:14px; color:var(--tenue); text-align:center; }
+footer a { color:var(--soft); }
+
+@media (max-width:520px) {
+  body { font-size:17px; }
+  .apertura { padding-top:40px; }
+  .apertura .sub, .chiusura p { font-size:18px; }
+  .richiesta { padding:18px 16px 62px; }
+  .richiesta p { font-size:16px; }
+  .passo .testa { flex-direction:column; gap:2px; }
+}
+</style>
+</head>
+<body>
+
+<header class="barra"><div class="w">
+  <a class="marchio" href="../"><img src="../img/simbolo-ailab.png" alt=""><span class="nome"><b>AI</b>Lab</span></a>
+  <small>@matti_ia_</small>
+</div></header>
+
+<main class="w">
+
+<div class="apertura">
+  <p class="sopra">Dai video del menù, del garage e della sfida</p>
+  <h1>Le richieste esatte e il <em>messaggio</em></h1>
+  <p class="sub">Sono quelle che ho scritto a ChatGPT il 23 novembre, parola per parola, con i tempi di ogni giro. In fondo ci sono le due righe che mando alle attività nella sfida dei 30 giorni. Dove trovi le parentesi quadre metti i dati dell'attività che hai scelto.</p>
+
+  <div class="serve">
+    <h3>Cosa ti serve</h3>
+    <ul>
+      <li>ChatGPT, in una chat normale: serve per allegare la foto.</li>
+      <li>La foto dell'oggetto da rifare. Io le ho prese da Google Maps, fra le foto pubbliche dell'attività.</li>
+    </ul>
+  </div>
+</div>
+
+<section>
+  <p class="fase">Il menù del kebab · due giri</p>
+  <h2>Prima la grafica, poi i <em>nomi</em></h2>
+  <p>Il volantino aveva dieci foto e sotto solo il prezzo, con lo sfondo a scacchi stampato dietro metà delle foto.</p>
+  <div class="passo">
+    <div class="testa"><span class="titolo">1 · Primo giro</span><span class="tempo">55 s</span></div>
+    <p class="prima">Allega la foto del volantino, poi scrivi:</p>
+    <div class="richiesta">
+      <p data-testo>Questo è il volantino-menù di <mark>[un kebab da asporto]</mark>. Rifallo come lo farebbe un grafico, da stampare in A4 verticale: stesso logo e stessi colori, stessi prezzi e stesso riquadro della consegna. Non aggiungere niente che nel volantino non c'è. Generami l'immagine del menù nuovo.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Gli scacchi sono spariti e i prezzi erano giusti, ma i nomi dei piatti ancora non c'erano.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">2 · Secondo giro</span><span class="tempo">meno di 2 min</span></div>
+    <div class="richiesta">
+      <p data-testo>È più pulito, ma è ancora un muro di foto con sotto solo i prezzi: chi lo legge non sa cosa sta comprando. Rifallo da menù vero: dividilo in <mark>[Burger, Kebab e Pollo]</mark>, e sotto ogni foto scrivi il nome di quello che si vede, con lo stesso prezzo. Non inventare piatti e non cambiare nessun prezzo.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Questo è quello del video. I nomi li ha dedotti dalle foto: uno è venuto in inglese.</p>
+  </div>
+</section>
+
+<section>
+  <p class="fase">Il cartello del garage · tre giri</p>
+  <h2>Al secondo giro era bello, e <em>sbagliato</em></h2>
+  <p>Erano due fogli uguali attaccati a una colonna, uno in italiano e uno in inglese, con la Ferrari nella stessa fascia dei furgoni.</p>
+  <div class="passo">
+    <div class="testa"><span class="titolo">1 · Primo giro</span><span class="tempo">meno di 2 min</span></div>
+    <p class="prima">Allega la foto, poi scrivi:</p>
+    <div class="richiesta">
+      <p data-testo>Questi sono <mark>[i due cartelli delle tariffe notturne di un garage]</mark>, attaccati a una colonna: uno in italiano e uno in inglese. Rifalli come li farebbe un grafico: un solo cartello A3 verticale in italiano e inglese, con gli stessi orari, le stesse fasce e gli stessi prezzi. Non aggiungere niente che nei cartelli non c'è. Generami l'immagine del cartello nuovo.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Era lucido, ma aveva copiato tutto com'era, errori compresi.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">2 · Secondo giro</span><span class="tempo">meno di 2 min</span></div>
+    <div class="richiesta">
+      <p data-testo>È più lucido, ma hai copiato il cartello com'era: <mark>[due cartelli uguali uno sotto l'altro, la Ferrari nella stessa fascia dei furgoni, i prezzi un po' col punto e un po' con la virgola, e «THE NIGHTPARKING»]</mark>. Rifallo da grafico vero: un cartello solo, ogni riga in italiano con sotto l'inglese corretto, ogni fascia con un nome per tipo di auto e le marche sotto come esempio, e i prezzi scritti tutti allo stesso modo. Stessi orari e stessi prezzi.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Un cartello solo e in due lingue. Però l'Opel era diventata un'auto premium, e la Ferrari stava ancora coi furgoni.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">3 · Terzo giro</span><span class="tempo">meno di 2 min</span></div>
+    <div class="richiesta">
+      <p data-testo>Quasi: però <mark>[l'Opel non è un'auto premium, e la Ferrari non è un SUV né un furgone]</mark>. Chiama le tre fasce <mark>[Auto piccole, Auto medie e Auto grandi, di lusso e furgoni]</mark>, con l'inglese sotto. Tutto il resto lascialo uguale.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Questo è quello del video. In tutto, meno di sei minuti di lavoro suo.</p>
+  </div>
+</section>
+
+<section>
+  <p class="fase">Prima di consegnarli</p>
+  <h2>Prezzi e nomi li rileggi <em>tu</em></h2>
+  <div class="controllo">
+    <p>Uno per uno, contro la foto vecchia. Io li ho controllati: i prezzi coincidevano. Ma il menù e il cartello vanno in mano ai clienti, e un errore lo paga il titolare.</p>
+    <p>I nomi dei piatti e le fasce del garage ChatGPT li ha scelti da solo: falli confermare al titolare prima di stampare.</p>
+  </div>
+</section>
+
+<section>
+  <p class="fase">La sfida dei 30 giorni</p>
+  <h2>Le due righe che mando alle <em>attività</em></h2>
+  <p>Le mando su Instagram ad attività con tante recensioni su Google e nessun sito, che però sul profilo mostrano di curarsi: logo, foto fatte bene, grafiche.</p>
+  <div class="passo">
+    <div class="testa"><span class="titolo">Il messaggio</span><span class="tempo"></span></div>
+    <div class="richiesta">
+      <p data-testo>Ciao! Vi ho trovati su Google: avete recensioni ottime, ma non avete un sito.
+
+Ve ne ho preparato uno. Se volete ve lo faccio vedere, poi decidete voi, senza impegno.</p>
+      <button class="copia" type="button">Copia</button>
+    </div>
+    <p class="dopo">Se rispondono, il sito lo preparo in quel momento, con i loro dati veri, e glielo mando.</p>
+  </div>
+</section>
+
+<div class="chiusura">
+  <p>Il cartello è la parte facile. Quella che paga è trovare chi lo compra e farsi dire sì: in AI Lab ti faccio vedere come, passo passo.</p>
+  <a class="cta" href="../">Scopri AI Lab</a>
+</div>
+
+</main>
+
+<footer><div class="w">Matteo Esposito · <a href="https://www.instagram.com/matti_ia_/">@matti_ia_</a></div></footer>
+
+<script>
+document.querySelectorAll('.copia').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.parentNode.querySelector('[data-testo]').textContent.replace(/\s+/g, ' ').trim();
+    var fatto = function () { b.textContent = 'Copiata'; b.classList.add('fatto'); setTimeout(function () { b.textContent = 'Copia'; b.classList.remove('fatto'); }, 2200); };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(t).then(fatto, function () { vecchio(t); fatto(); }); }
+    else { vecchio(t); fatto(); }
+  });
+});
+function vecchio(t) {
+  var a = document.createElement('textarea'); a.value = t; a.setAttribute('readonly', ''); a.style.position = 'fixed'; a.style.opacity = '0';
+  document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(a);
+}
+</script>
+</body>
+</html>
