@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le richieste esatte e il messaggio · @matti_ia_</title>
-<meta name="description" content="Le richieste che ho scritto a ChatGPT per rifare il menù del kebab e il cartello del garage, parola per parola, e il messaggio che mando alle attività.">
+<meta name="description" content="I tre controlli per capire se uno sconto è vero, il listino con i minuti di ogni lavoro, le richieste che ho scritto a ChatGPT parola per parola e il messaggio che mando alle attività.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Le richieste esatte e il messaggio">
 <meta property="og:description" content="Parola per parola, con i tempi di ogni giro. Dai video di @matti_ia_.">
@@ -71,6 +71,17 @@ section { padding:52px 0 8px; }
 .passo .dopo { font-size:16px; margin-top:12px; color:var(--soft); }
 
 .controllo { margin-top:16px; border-left:3px solid var(--oro); padding:4px 0 4px 18px; }
+.indice { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.indice a { font-size:14px; font-weight:700; color:var(--chiaro); text-decoration:none; border:1px solid var(--bordo); border-radius:999px; padding:6px 14px; }
+.listino { margin-top:22px; border:1px solid var(--bordo); border-radius:18px; overflow:hidden; }
+.listino .riga { display:grid; grid-template-columns:1.4fr 1.2fr auto; gap:14px; align-items:baseline; padding:14px 18px; border-top:1px solid var(--bordo); }
+.listino .riga:first-child { border-top:0; }
+.listino .lavoro { color:var(--crema); font-weight:700; }
+.listino .min { font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--soft); }
+.listino .euro { font-weight:800; color:var(--oro); white-space:nowrap; text-align:right; }
+.listino .mese { background:rgba(62,224,127,.08); }
+.listino .mese .euro { color:var(--verde); }
+section[id] { scroll-margin-top:16px; }
 
 .chiusura { padding:64px 0 40px; text-align:center; }
 .chiusura p { max-width:560px; margin-inline:auto; font-size:20px; line-height:1.5; color:#D5DCD6; }
@@ -88,6 +99,9 @@ footer a { color:var(--soft); }
   .richiesta { padding:18px 16px 62px; }
   .richiesta p { font-size:16px; }
   .passo .testa { flex-direction:column; gap:2px; }
+  .listino .riga { grid-template-columns:1fr auto; gap:4px 12px; padding:12px 14px; }
+  .listino .min { grid-column:1; grid-row:2; }
+  .listino .euro { grid-column:2; grid-row:1 / span 2; align-self:center; }
 }
 </style>
 </head>
@@ -101,9 +115,16 @@ footer a { color:var(--soft); }
 <main class="w">
 
 <div class="apertura">
-  <p class="sopra">Dai video del menù, dei garage e della sfida</p>
+  <p class="sopra">Dai video del Black Friday, del listino, del menù e dei garage</p>
   <h1>Le richieste esatte e il <em>messaggio</em></h1>
-  <p class="sub">Sono quelle che ho scritto a ChatGPT il 23 novembre, parola per parola, con i tempi di ogni giro. In fondo ci sono le due righe che mando alle attività nella sfida dei 30 giorni. Dove trovi le parentesi quadre metti i dati dell'attività che hai scelto.</p>
+  <p class="sub">Qui trovi quello che ti ho promesso nei video: i tre controlli per capire se uno sconto è vero, il listino completo con i minuti di ogni lavoro, le richieste che ho scritto a ChatGPT parola per parola e le due righe che mando alle attività. Dove trovi le parentesi quadre metti i dati dell'attività che hai scelto.</p>
+
+  <nav class="indice">
+    <a href="#sconto">Lo sconto è vero?</a>
+    <a href="#listino">Il listino</a>
+    <a href="#richieste">Le richieste</a>
+    <a href="#messaggio">Il messaggio</a>
+  </nav>
 
   <div class="serve">
     <h3>Cosa ti serve</h3>
@@ -114,7 +135,57 @@ footer a { color:var(--soft); }
   </div>
 </div>
 
-<section>
+<section id="sconto">
+  <p class="fase">Il Black Friday · tre controlli</p>
+  <h2>Lo sconto è <em>vero?</em></h2>
+  <p>Il trucco è questo: un prezzo sale qualche settimana prima, poi torna com'era con lo sconto scritto sopra. Questi tre controlli ti prendono due minuti, prima di pagare.</p>
+  <div class="passo">
+    <div class="testa"><span class="titolo">1 · Il prezzo precedente</span><span class="tempo">10 s</span></div>
+    <p>Accanto allo sconto ci deve stare il prezzo di prima. Per legge è il prezzo più basso degli ultimi 30 giorni, ed è su quello che si calcola lo sconto (art. 17-bis del Codice del consumo, in vigore dal 2023).</p>
+    <p class="dopo">Se il prezzo di prima non c'è, è già un segnale. A febbraio Altroconsumo l'ha trovato mancante nel 41% dei 208 siti che ha controllato.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">2 · Lo storico del prezzo</span><span class="tempo">1 min</span></div>
+    <p>Cerca il prodotto su un sito che confronta i prezzi e mostra il grafico degli ultimi mesi, come idealo. Per Amazon c'è Keepa. Se a ottobre costava quanto adesso, lo sconto non c'è.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">3 · Lo stesso modello altrove</span><span class="tempo">1 min</span></div>
+    <p>Copia il nome esatto del modello, con il codice, e cercalo in altri due negozi. La descrizione non basta: due prodotti quasi uguali possono avere codici e prezzi diversi.</p>
+  </div>
+  <div class="controllo">
+    <p>Da dove vengono i numeri del video: il calcolo 500 → 600 → 500 con «-17%» è l'esempio che fa Altroconsumo per spiegare il trucco, non un prodotto vero. Nel suo monitoraggio fra ottobre e novembre era davvero scontato circa un articolo su cinque.</p>
+  </div>
+</section>
+
+<section id="listino">
+  <p class="fase">Il listino · lavoro per lavoro</p>
+  <h2>Quanto chiedi, e quanto ci <em>metti</em></h2>
+  <p>Sono i prezzi che di solito si fanno a una piccola attività, con i tempi veri delle prove delle lezioni di AI Lab. Sono esempi, non promesse: quanto incassi dipende da quante attività contatti.</p>
+  <div class="listino">
+    <div class="riga"><span class="lavoro">Il sito</span><span class="min">14 min 40 s, più i controlli</span><span class="euro">da 250 €</span></div>
+    <div class="riga"><span class="lavoro">L'assistente sul sito</span><span class="min">circa 6 min, più la prova da cliente</span><span class="euro">150–250 €</span></div>
+    <div class="riga"><span class="lavoro">Un carosello di 5 slide</span><span class="min">6 min e mezzo</span><span class="euro">80–120 €</span></div>
+    <div class="riga"><span class="lavoro">Un reel</span><span class="min">circa un quarto d'ora con Claude, più una correzione</span><span class="euro">80–150 €</span></div>
+    <div class="riga"><span class="lavoro">Il video con l'avatar che presenta un capo</span><span class="min"></span><span class="euro">100–200 €</span></div>
+    <div class="riga"><span class="lavoro">Un'inserzione: tre grafiche e tre testi</span><span class="min">3 min 34 s</span><span class="euro">80–120 €</span></div>
+    <div class="riga"><span class="lavoro">Una locandina</span><span class="min">1 min 49 s</span><span class="euro">50–80 €</span></div>
+    <div class="riga"><span class="lavoro">Un menù</span><span class="min">tre giri, 13 min 28 s</span><span class="euro">50–80 €</span></div>
+    <div class="riga mese"><span class="lavoro">Il mensile: caroselli e reel del mese, sito e assistente aggiornati</span><span class="min">ogni mese</span><span class="euro">100–200 € al mese</span></div>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">Tre conti d'esempio</span><span class="tempo"></span></div>
+    <p>Un'attività che prende il sito e l'assistente: da 400 €, una volta. Un'altra che vuole una locandina e un menù: da 100 a 160 €. Tre attività col mensile: da 300 a 600 € ogni mese.</p>
+  </div>
+  <div class="passo">
+    <div class="testa"><span class="titolo">Quanto costa a te</span><span class="tempo"></span></div>
+    <p>ChatGPT Plus, 23 € al mese, per sito, assistente, caroselli, inserzioni e locandine. Claude Pro, 20 dollari al mese più le tasse, per il reel. HeyGen, 29 dollari al mese, per il video con l'avatar. Dominio e hosting del sito li paga l'attività.</p>
+  </div>
+  <div class="controllo">
+    <p>I minuti sono solo quelli del lavoro: all'inizio ti prende di più trovare le attività e contattarle. Le cifre sono lorde: per le tasse chiedi al tuo commercialista o al tuo CAF.</p>
+  </div>
+</section>
+
+<section id="richieste">
   <p class="fase">Il menù del kebab · due giri</p>
   <h2>Prima la grafica, poi i <em>nomi</em></h2>
   <p>Il volantino aveva dieci foto e sotto solo il prezzo, con lo sfondo a scacchi stampato dietro metà delle foto.</p>
@@ -200,7 +271,7 @@ footer a { color:var(--soft); }
   </div>
 </section>
 
-<section>
+<section id="messaggio">
   <p class="fase">La sfida dei 30 giorni</p>
   <h2>Le due righe che mando alle <em>attività</em></h2>
   <p>Le mando su Instagram ad attività con tante recensioni su Google e nessun sito, che però sul profilo mostrano di curarsi: logo, foto fatte bene, grafiche.</p>
